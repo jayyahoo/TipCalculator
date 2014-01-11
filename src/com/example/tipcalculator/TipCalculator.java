@@ -1,3 +1,10 @@
+
+/* Author: Jay Jayakumaran
+ * Introduction to Android Class 
+ * Assignment 1- Tip Calculator
+ */
+
+
 package com.example.tipcalculator;
 
 import android.os.Bundle;
