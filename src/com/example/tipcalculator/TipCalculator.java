@@ -22,16 +22,18 @@ public class TipCalculator extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tip_calculator);
+       //Getting the Button Ids and EditText Ids
+        
         Button tenbtn = (Button)findViewById(R.id.ten);
+        Button fifteenbtn = (Button)findViewById(R.id.fifteen);
         Button twentybtn = (Button)findViewById(R.id.twenty);
-        Button thirtybtn = (Button)findViewById(R.id.thirty);
         final EditText totalAmount = (EditText)findViewById(R.id.totalAmount);
         
        final TextView result = (TextView)findViewById(R.id.result);
     
        
     
-       
+       // implementing the onclick event listeners for 10, 15, and 20% buttons to calculate the correct tip
        
        tenbtn.setOnClickListener(new OnClickListener()
         {
@@ -45,13 +47,12 @@ public class TipCalculator extends Activity {
 				double d=Double.parseDouble(totalAmount.getText().toString());
 				double tipValue=d*.10;
 				
-				result.setText(tipValue +"$");
-					
+				result.setText(getResult(tipValue));
 				}
             });
        
        
-       twentybtn.setOnClickListener(new OnClickListener()
+       fifteenbtn.setOnClickListener(new OnClickListener()
        {
                 
                  
@@ -61,14 +62,14 @@ public class TipCalculator extends Activity {
 					// TODO Auto-generated method stub
 			
 					double d=Double.parseDouble(totalAmount.getText().toString());
-				double tipValue=d*.20;
+				double tipValue=d*.15;
 				
 				result.setText(getResult(tipValue));
 					
 				}
            });
        
-       thirtybtn.setOnClickListener(new OnClickListener()
+       twentybtn.setOnClickListener(new OnClickListener()
        {
                 
                  
@@ -78,7 +79,7 @@ public class TipCalculator extends Activity {
 					// TODO Auto-generated method stub
 				
 					double d=Double.parseDouble(totalAmount.getText().toString());
-				double tipValue=d*.30;
+				double tipValue=d*.20;
 				
 				result.setText(getResult(tipValue));
 				}

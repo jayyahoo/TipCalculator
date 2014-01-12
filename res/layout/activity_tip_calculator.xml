@@ -22,34 +22,6 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/twenty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/ten"
-        android:layout_alignBottom="@+id/ten"
-        android:layout_centerHorizontal="true"
-        android:text="20%" />
-
-    <Button
-        android:id="@+id/thirty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/twenty"
-        android:layout_alignBottom="@+id/twenty"
-        android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@+id/twenty"
-        android:text="30%" />
-
-    <Button
-        android:id="@+id/ten"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/totalAmount"
-        android:layout_below="@+id/totalAmount"
-        android:layout_marginTop="78dp"
-        android:text="10%" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -57,7 +29,7 @@
         android:layout_alignLeft="@+id/ten"
         android:layout_below="@+id/ten"
         android:layout_marginTop="76dp"
-        android:text="Tip is:"
+        android:text="@string/tipis"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
@@ -66,7 +38,33 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView1"
         android:layout_toRightOf="@+id/ten"
-        android:text="Medium Text"
+        android:text="@string/display"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/totalAmount"
+        android:layout_below="@+id/totalAmount"
+        android:layout_marginTop="62dp"
+        android:text="@string/ten" />
+
+    <Button
+        android:id="@+id/fifteen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/fifteen" />
+
+    <Button
+        android:id="@+id/twenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/fifteen"
+        android:text="@string/twenty" />
 
 </RelativeLayout>
